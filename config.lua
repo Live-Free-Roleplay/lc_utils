@@ -1,6 +1,6 @@
 Config = Config or {}
 
-Config.framework = "QBCore"						-- [ESX|QBCore] Your framework
+Config.framework = "ESX"						-- [ESX|QBCore] Your framework
 
 Config.ESX_settings = {							-- (ESX Only) ESX settings
 	['is_updated'] = true,						-- Set to false if your ESX uses the getSharedObject event (usually for ESX versions older than 1.9.0)
@@ -19,11 +19,11 @@ Config.format = {
 -- The "default" option will use the framework's default script
 -- ATTENTION: If you set it to "other," it's necessary to configure the script inside the custom_scripts folder in the respective file
 Config.custom_scripts_compatibility = {
-	['fuel'] = "default",						-- [ox_fuel|ps-fuel|sna-fuel|cdn-fuel|LegacyFuel|default|other] Fuel script Compatibility
-	['inventory'] = "default",					-- [ox_inventory|qs-inventory|ps-inventory|default|other] Inventory script Compatibility
-	['keys'] = "default",						-- [qs-vehiclekeys|cd_garage|jaksam|wasabi_carlock|default|other] Keys script Compatibility
+	['fuel'] = "ox_fuel",						-- [ox_fuel|ps-fuel|sna-fuel|cdn-fuel|LegacyFuel|default|other] Fuel script Compatibility
+	['inventory'] = "ox_inventory",					-- [ox_inventory|qs-inventory|ps-inventory|default|other] Inventory script Compatibility
+	['keys'] = "wasabi_carlock",						-- [qs-vehiclekeys|cd_garage|jaksam|wasabi_carlock|default|other] Keys script Compatibility
 	['mdt'] = "default",						-- [ps-mdt|default|other] MDT script Compatibility (to log weapon serial)
-	['target'] = "disabled",					-- [qb-target|ox_target|disabled|other] Target script Compatibility (disabled will use markers)
+	['target'] = "ox_target",					-- [qb-target|ox_target|disabled|other] Target script Compatibility (disabled will use markers)
 	['notification'] = "default",				-- [okokNotify|default|other] Notification script Compatibility
 }
 
@@ -55,16 +55,16 @@ Config.spawned_vehicles = {						-- Config for the vehicles that are spawned in 
 Config.owned_vehicles = {							-- (Only for the vehicles that will be inserted into your garage) This is the config to insert a vehicle in the player owned vehicles table
 	['plate_format'] = 'xxxxxxxx',					-- Plate generation format. [n = number | l = letter | x = any]
 	['default'] = {									-- The garage type
-		['garage'] = 'motelgarage',					-- This is the garage where the owned vehicles will be inserted
+		['garage'] = 'A',					-- This is the garage where the owned vehicles will be inserted
 		-- ['garage'] = 'SanAndreasAvenue', 		-- Default garage for ESX framework
-		['garage_display_name'] = 'Motel Parking'	-- Just a nice name to display to the user
+		['garage_display_name'] = 'Legion Parking'	-- Just a nice name to display to the user
 	},
 	['airplane'] = {
-		['garage'] = 'intairport',
+		['garage'] = 'A',
 		['garage_display_name'] = 'Airport Hangar'
 	},
 	['boat'] = {
-		['garage'] = 'lsymc',
+		['garage'] = 'A',
 		['garage_display_name'] = 'LSYMC Boathouse'
 	}
 }
