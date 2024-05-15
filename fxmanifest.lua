@@ -25,7 +25,8 @@ shared_scripts {
 	"config.lua",
 	"functions/shared.lua",
 	"lang/*.lua",
-	'@ox_lib/init.lua'
+	'@ox_lib/init.lua',
+  "fixDeleteVehicle.lua"
 }
 
 files {

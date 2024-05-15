@@ -288,7 +288,8 @@ function Utils.Vehicles.setVehicleProperties(vehicle, props)
 	SetVehicleModKit(vehicle, 0)
 	SetVehicleAutoRepairDisabled(vehicle, true)
 
-	SetVehicleNumberPlateText(vehicle, props.plate)
+	--SetVehicleNumberPlateText(vehicle, props.plate)
+	exports["AdvancedParking"]:UpdatePlate(vehicle, props.plate)
 
 	if props.plateIndex then
 		SetVehicleNumberPlateTextIndex(vehicle, props.plateIndex)
