@@ -43,7 +43,8 @@ function Utils.Vehicles.deleteVehicle(vehicle)
 	if IsEntityAVehicle(vehicle) then
 		Utils.Framework.removeVehicleKeys(vehicle)
 		SetEntityAsMissionEntity(vehicle, true, true)
-		DeleteVehicle(vehicle)
+		--DeleteVehicle(vehicle)
+		exports["AdvancedParking"]:DeleteVehicle(vehicle)
 	elseif plate then
 		Utils.Framework.removeVehicleKeysFromPlate(plate)
 	end

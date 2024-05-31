@@ -15,6 +15,7 @@ end
 -- replaces DeleteVehicle native on client side
 if (not IsDuplicityVersion()) then
 	DeleteVehicle = function(vehicle)
+		print("DELETING")
 		exports["AdvancedParking"]:DeleteVehicle(vehicle)
 	end
 end
